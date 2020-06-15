@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BigShools.Models;
+using BigShools.ViewModels;
 
 namespace BigShools.Controllers
 {
@@ -15,7 +17,7 @@ namespace BigShools.Controllers
         }
         public ActionResult Create()
         {
-            var viewModel = new CoursesViewModel
+            var viewModel = new CourseViewModel
             {
                 Categories = _dbContext.Categories.ToList()
             };
