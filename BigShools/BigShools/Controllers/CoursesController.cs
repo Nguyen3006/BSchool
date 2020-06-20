@@ -10,19 +10,6 @@ namespace BigShools.Controllers
 {
     public class CoursesController : Controller
     {
-        private readonly ApplicationDbContext _dbContext;
-        public CoursesController()
-        {
-            _dbContext = new ApplicationDbContext();
-        }
-        public ActionResult Create()
-        {
-            var viewModel = new CourseViewModel
-            {
-                Categories = _dbContext.Categories.ToList()
-            };
-            return View(viewModel);
-        }
         // GET: Courses
         public ActionResult Index()
         {
